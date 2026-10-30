@@ -1,4 +1,4 @@
-# PRAGYAN AI — SIH1450 Frontend Prototype
+# PRAGYAN AI 
 
 A dark, futuristic, responsive frontend prototype for **PRAGYAN: Access-Clearance-Aware Retrieval-Augmented Generation for Fully Offline, Multilingual Enterprise Knowledge Systems**.
 
