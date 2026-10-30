@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <title>PRAGYAN AI | Secure Knowledge Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="overview">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span><b>PRAGYAN</b><small>KNOWLEDGE INTELLIGENCE</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-page="overview"><i>◈</i><span data-i18n="overview">Overview</span></button>
+        <button class="nav-item" data-page="assistant"><i>✳</i><span data-i18n="assistant">AI Assistant</span><em class="nav-live"></em></button>
+        <button class="nav-item" data-page="documents"><i>▤</i><span data-i18n="documents">Document Vault</span></button>
+        <button class="nav-item" data-page="security"><i>⬡</i><span data-i18n="security">Access & Security</span></button>
+        <button class="nav-item" data-page="analytics"><i>▥</i><span data-i18n="analytics">Research Analytics</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="offline-card"><span class="pulse-dot"></span><div><b>OFFLINE MODE</b><small>Local demo environment</small></div><span class="lock">⌑</span></div>
+        <div class="profile">
+          <div class="avatar">AJ</div><div class="profile-info"><b>Admin User</b><small>Research Workspace</small></div><button class="more-btn" title="Profile options">···</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="pageCrumb">Overview</strong></div>
+        <div class="top-actions">
+          <div class="system-status"><span class="pulse-dot"></span> ALL SYSTEMS LOCAL</div>
+          <button class="icon-btn" id="languageBtn" title="Switch language">हि</button>
+          <button class="icon-btn" id="themeBtn" title="Toggle theme">◐</button>
+          <div class="top-avatar">AJ</div>
+        </div>
+      </header>
+
+      <section class="page active" id="page-overview">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> SECURE KNOWLEDGE ENVIRONMENT</div><h1>Intelligence, <span>within reach.</span></h1><p class="subhead">Your organization's knowledge. Searchable, traceable, and access-aware.</p></div>
+          <div class="date-chip"><span>◷</span><span id="todayDate"></span></div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-glow"></div><div class="hero-content">
+            <div class="hero-tag"><span class="spark">✦</span> PRAGYAN INTELLIGENCE ENGINE</div>
+            <h2>Ask better questions.<br><span>Find trusted answers.</span></h2>
+            <p>Explore your approved knowledge base with multilingual, source-backed intelligence.</p>
+            <button class="primary-btn" data-go="assistant">Launch AI Assistant <span>↗</span></button>
+          </div>
+          <div class="hero-orbit"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>✳</span><small>RAG<br>CORE</small></div><i class="orbit-node node-a"></i><i class="orbit-node node-b"></i><i class="orbit-node node-c"></i></div>
+          <div class="hero-footer"><span><i class="mini-check">✓</i> Local-first architecture</span><span><i class="mini-check">✓</i> Clearance-aware retrieval</span><span><i class="mini-check">✓</i> Citation-led responses</span></div>
+        </div>
+
+        <div class="section-heading"><div><div class="eyebrow">YOUR ENVIRONMENT</div><h3>Workspace overview</h3></div><span class="muted-note">Demo data · stored in this browser</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Knowledge documents</span><span class="stat-icon cyan">▤</span></div><strong id="statDocs">08</strong><small><span class="positive">↗ Ready</span> in your vault</small><div class="stat-sparkline">▁▃▂▅▄▆▅█</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Queries this session</span><span class="stat-icon violet">✳</span></div><strong id="statQueries">12</strong><small><span class="positive">+3</span> from last session</small><div class="stat-sparkline violet-line">▂▃▂▄▃▅▆█</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Access checks</span><span class="stat-icon green">⬡</span></div><strong id="statChecks">100%</strong><small><span class="positive">✓ Active</span> clearance filter</small><div class="stat-sparkline green-line">▆▆▆▆▆▆▆█</div></article>
+          <article class="stat-card"><div class="stat-top"><span>System status</span><span class="stat-icon amber">◉</span></div><strong class="status-word">LOCAL</strong><small><span class="positive">●</span> No cloud connection</small><div class="status-track"><span></span></div></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel recent-panel"><div class="panel-head"><div><div class="eyebrow">KNOWLEDGE BASE</div><h3>Recently added documents</h3></div><button class="text-btn" data-go="documents">View vault ↗</button></div><div class="document-list" id="recentDocs"></div></article>
+          <article class="panel clearance-panel"><div class="panel-head"><div><div class="eyebrow">IDENTITY & PERMISSIONS</div><h3>Active clearance</h3></div><span class="shield">⬡</span></div><div class="clearance-level"><div class="level-icon">◆</div><div><small>DEMO USER CLEARANCE</small><b id="overviewClearance">CONFIDENTIAL</b></div></div><p class="panel-description">Search results are restricted to documents at or below your selected clearance level.</p><button class="outline-btn" data-go="security">Manage access settings <span>→</span></button><div class="security-foot"><span class="pulse-dot"></span> Retrieval-level policy preview enabled</div></article>
+        </div>
+        <div class="bottom-note"><span>✳</span><p><b>Research focus:</b> clearance-aware retrieval under offline, quantized inference. This interface is a frontend demonstration of the PRAGYAN concept.</p></div>
+      </section>
+
+      <section class="page" id="page-assistant">
+        <div class="page-title-row"><div><div class="eyebrow">ASK YOUR KNOWLEDGE BASE</div><h1>AI <span>Assistant</span></h1><p class="subhead">Get grounded answers from documents you are permitted to access.</p></div><div class="assistant-badge"><span class="pulse-dot"></span> LOCAL DEMO ENGINE</div></div>
+        <div class="assistant-layout">
+          <div class="chat-panel panel">
+            <div class="chat-top"><div class="chat-identity"><div class="bot-avatar">✳</div><div><b>Pragyan Assistant</b><small><span class="pulse-dot"></span> Ready to assist · Demo mode</small></div></div><button class="icon-btn" id="clearChat" title="Clear conversation">↻</button></div>
+            <div class="chat-messages" id="chatMessages"><div class="message assistant-message"><div class="message-avatar">✳</div><div class="message-body"><div class="message-meta">PRAGYAN <span>JUST NOW</span></div><div class="bubble">Hello! I'm Pragyan, your secure knowledge assistant. Ask me about the sample documents in your vault. I will only show information permitted by your selected clearance level.<br><br><span class="demo-disclaimer">Demo engine: responses are generated from the sample knowledge base, not a live LLM.</span></div></div></div></div>
+            <div class="suggestions"><span>TRY ASKING</span><button class="suggestion" data-prompt="What is the purpose of Pragyan?">What is Pragyan?</button><button class="suggestion" data-prompt="Explain the retrieval pipeline">Explain retrieval pipeline</button><button class="suggestion" data-prompt="What are the clearance levels?">Clearance levels</button></div>
+            <form class="chat-input-wrap" id="chatForm"><textarea id="chatInput" rows="1" placeholder="Ask a question about your knowledge base..." required></textarea><button class="send-btn" type="submit" aria-label="Send message">↑</button><div class="input-hint">ENTER TO SEND <span>·</span> SHIFT + ENTER FOR NEW LINE</div></form>
+          </div>
+          <aside class="assistant-side">
+            <div class="panel side-panel"><div class="eyebrow">YOUR ACCESS CONTEXT</div><h3>Clearance profile</h3><div class="access-select-wrap"><label for="assistantClearance">Current clearance</label><select id="assistantClearance"><option>Public</option><option>Internal</option><option selected>Confidential</option><option>Secret</option></select></div><div class="access-meter"><div class="meter-label"><span>ACCESS SCOPE</span><b id="scopeLabel">3 / 4</b></div><div class="meter-bars" id="meterBars"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i></div></div><p class="tiny-copy">Only documents matching this access scope can be considered by the demo retrieval layer.</p></div>
+            <div class="panel side-panel"><div class="eyebrow">RETRIEVAL PIPELINE</div><h3>How answers are built</h3><div class="pipeline"><div><i>01</i><span><b>Query understanding</b><small>Interpret your question</small></span></div><div><i>02</i><span><b>Clearance filtering</b><small>Remove restricted content</small></span></div><div><i>03</i><span><b>Hybrid retrieval</b><small>Find relevant passages</small></span></div><div><i>04</i><span><b>Grounded response</b><small>Answer with source references</small></span></div></div></div>
+            <div class="privacy-mini"><span>⌑</span><div><b>Your data stays in this browser</b><small>Demo uploads are stored locally. No server or cloud AI is connected.</small></div></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-documents">
+        <div class="page-title-row"><div><div class="eyebrow">ORGANIZE YOUR KNOWLEDGE</div><h1>Document <span>Vault</span></h1><p class="subhead">Manage sample knowledge assets and add your own text documents.</p></div><button class="primary-btn" id="uploadTrigger">＋ Add document</button><input type="file" id="fileInput" accept=".txt,.md,.csv,.json" multiple hidden /></div>
+        <div class="vault-toolbar panel"><div class="search-box"><span>⌕</span><input type="search" id="docSearch" placeholder="Search documents..." /></div><select id="docFilter"><option value="All">All clearance levels</option><option>Public</option><option>Internal</option><option>Confidential</option><option>Secret</option></select><span class="result-count" id="docCount">8 documents</span></div>
+        <div class="panel table-panel"><div class="table-scroll"><table><thead><tr><th>DOCUMENT</th><th>CATEGORY</th><th>ACCESS LEVEL</th><th>UPDATED</th><th>STATUS</th><th></th></tr></thead><tbody id="docTable"></tbody></table></div><div class="table-foot"><span>Showing <b id="showingCount">8</b> knowledge assets</span><span><i class="pulse-dot"></i> Local demo storage</span></div></div>
+        <div class="upload-tip"><span>✦</span><div><b>Supported in this prototype</b><p>Upload TXT, Markdown, CSV or JSON files. PDF/DOCX parsing and OCR require the full backend ingestion pipeline.</p></div></div>
+      </section>
+
+      <section class="page" id="page-security">
+        <div class="page-title-row"><div><div class="eyebrow">ZERO-TRUST KNOWLEDGE ACCESS</div><h1>Access <span>& Security</span></h1><p class="subhead">Preview hierarchical document clearance and retrieval policy controls.</p></div><div class="secure-pill">⬡ POLICY PREVIEW</div></div>
+        <div class="security-grid">
+          <div class="panel clearance-manager"><div class="panel-head"><div><div class="eyebrow">USER ACCESS PROFILE</div><h3>Set your demo clearance</h3></div><span class="shield large">⬡</span></div><p class="panel-description">Choose a clearance level to preview which document tiers become searchable.</p><div class="clearance-options" id="clearanceOptions"><button data-level="Public"><span class="tier-dot public-dot"></span><span><b>Public</b><small>Open information</small></span><span class="tier-rank">01</span></button><button data-level="Internal"><span class="tier-dot internal-dot"></span><span><b>Internal</b><small>Organization use</small></span><span class="tier-rank">02</span></button><button class="selected" data-level="Confidential"><span class="tier-dot confidential-dot"></span><span><b>Confidential</b><small>Sensitive internal data</small></span><span class="tier-rank">03</span></button><button data-level="Secret"><span class="tier-dot secret-dot"></span><span><b>Secret</b><small>Highest demo tier</small></span><span class="tier-rank">04</span></button></div><div class="policy-callout"><span>ⓘ</span><p><b>Prototype limitation:</b> this selector demonstrates UI behavior only. Production authorization must be enforced server-side using authenticated identities and retrieval-layer filters.</p></div></div>
+          <div class="panel policy-panel"><div class="eyebrow">HIERARCHICAL ACCESS MODEL</div><h3>Clearance inheritance</h3><p class="panel-description">A higher clearance can access lower tiers. Lower tiers cannot retrieve higher-classified content.</p><div class="tier-stack"><div class="tier-row tier-secret"><span>04</span><b>SECRET</b><small>Restricted</small><i>◆</i></div><div class="tier-row tier-conf"><span>03</span><b>CONFIDENTIAL</b><small>Sensitive</small><i>◆</i></div><div class="tier-row tier-internal"><span>02</span><b>INTERNAL</b><small>Organization</small><i>◆</i></div><div class="tier-row tier-public"><span>01</span><b>PUBLIC</b><small>Open</small><i>◆</i></div></div><div class="policy-equation"><span>USER CLEARANCE</span><b>≥</b><span>DOCUMENT CLASSIFICATION</span></div></div>
+        </div>
+        <div class="panel audit-panel"><div class="panel-head"><div><div class="eyebrow">TRANSPARENCY & TRACEABILITY</div><h3>Recent access events</h3></div><span class="live-label"><i class="pulse-dot"></i> LIVE SESSION</span></div><div id="auditLog" class="audit-list"></div></div>
+      </section>
+
+      <section class="page" id="page-analytics">
+        <div class="page-title-row"><div><div class="eyebrow">MEASURE WHAT MATTERS</div><h1>Research <span>Analytics</span></h1><p class="subhead">Evaluation framework aligned with the PRAGYAN research roadmap.</p></div><div class="research-tag">SIH1450 · RESEARCH VIEW</div></div>
+        <div class="analytics-warning"><span>ⓘ</span><p>Illustrative dashboard values only. Replace with measured experiment results before presenting research claims.</p></div>
+        <div class="metric-grid"><div class="metric-card"><small>LEAKAGE RATE TARGET</small><strong>0.0<span>%</span></strong><em>Target metric · not measured</em></div><div class="metric-card"><small>RETRIEVAL PRECISION@K</small><strong>—</strong><em>Awaiting benchmark run</em></div><div class="metric-card"><small>AVG. QUERY LATENCY</small><strong>—</strong><em>Awaiting hardware test</em></div><div class="metric-card"><small>MODEL QUANTIZATION</small><strong>Q4 / Q5 / Q8</strong><em>Planned evaluation tiers</em></div></div>
+        <div class="analytics-grid"><div class="panel chart-panel"><div class="panel-head"><div><div class="eyebrow">EXPERIMENT DESIGN</div><h3>Baseline comparison</h3></div><span class="chart-label">CONCEPTUAL</span></div><div class="baseline-list"><div><div><b>Vanilla RAG</b><span>Access control: none</span></div><div class="baseline-track"><i style="width:100%"></i></div></div><div><div><b>Post-hoc filtering</b><span>Filter after retrieval</span></div><div class="baseline-track"><i style="width:72%"></i></div></div><div><div><b>PRAGYAN approach</b><span>Filter before ranking</span></div><div class="baseline-track"><i style="width:88%"></i></div></div></div><p class="chart-footnote">Illustrative bars explain the three systems to compare; they do not represent measured accuracy.</p></div>
+          <div class="panel research-panel"><div class="eyebrow">RESEARCH QUESTIONS</div><h3>What we aim to prove</h3><div class="rq-item"><span>RQ 01</span><p>Can retrieval-stage clearance enforcement preserve answer quality for permitted content?</p></div><div class="rq-item"><span>RQ 02</span><p>What accuracy, latency and memory trade-offs emerge under Q4/Q5/Q8 CPU inference?</p></div><div class="rq-item"><span>RQ 03</span><p>How does Hindi-English retrieval affect quality and access-control correctness?</p></div></div></div>
+        <div class="panel roadmap-panel"><div class="eyebrow">IMPLEMENTATION ROADMAP</div><h3>From prototype to research</h3><div class="roadmap"><div class="road-step done"><i>✓</i><b>Foundation</b><small>Scope & architecture</small></div><div class="road-step"><i>02</i><b>Core RAG</b><small>Ingestion & embeddings</small></div><div class="road-step"><i>03</i><b>Secure retrieval</b><small>Clearance-aware ranking</small></div><div class="road-step"><i>04</i><b>Evaluation</b><small>RAGAS & leakage rate</small></div><div class="road-step"><i>05</i><b>Publication</b><small>Paper & reproducibility</small></div></div></div>
+      </section>
+
+      <footer class="footer"><span>© 2026 PRAGYAN · SIH1450 CONCEPT PROTOTYPE</span><span>BUILT FOR TRUSTED KNOWLEDGE ACCESS <b>✳</b></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="docModal"><div class="modal panel"><button class="modal-close" id="modalClose">×</button><div class="eyebrow">DOCUMENT PREVIEW</div><h3 id="modalTitle">Document</h3><div class="modal-meta" id="modalMeta"></div><pre id="modalContent"></pre><button class="outline-btn" id="modalDone">Close preview</button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
